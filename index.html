@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discographie de SCH</title>
+    <link rel="icon" href="images/cd.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header class="h-screen bg-cover bg-center relative">
+      <nav
+        class="fixed top-0 left-0 w-full bg-black/50 px-4 py-4 flex justify-between items-center z-50"
+      >
+        <h1 class="text-2xl font-bold text-white">Discographie de SCH</h1>
+        <div class="hidden lg:flex space-x-4">
+          <button class="hover:underline text-white" onclick="scrollToSection('home')">
+            Accueil
+          </button>
+          <button class="hover:underline text-white" onclick="scrollToSection('albumsSection')">
+            Albums
+          </button>
+          <button class="hover:underline text-white" onclick="scrollToSection('mixtapesSection')">
+            Mixtapes
+          </button>
+          <button class="hover:underline text-white" onclick="scrollToSection('aboutSection')">
+            À propos
+          </button>
+        </div>
+        <button
+          id="menuToggle"
+          class="block lg:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <ul
+          id="menu"
+          class="absolute top-16 left-0 w-full bg-black/70 hidden flex-col items-center text-white text-lg lg:hidden transition-all duration-300 ease-in-out"
+        >
+          <li class="py-2">
+            <button class="hover:underline" onclick="scrollToSection('home')">
+              Accueil
+            </button>
+          </li>
+          <li class="py-2">
+            <button class="hover:underline" onclick="scrollToSection('albumsSection')">
+              Albums
+            </button>
+          </li>
+          <li class="py-2">
+            <button class="hover:underline" onclick="scrollToSection('mixtapesSection')">
+              Mixtapes
+            </button>
+          </li>
+          <li class="py-2">
+            <button class="hover:underline" onclick="scrollToSection('aboutSection')">
+              À propos
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div
+        id="home"
+        class="flex flex-col items-center justify-center h-full bg-black/50"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+          La Discographie de SCH
+        </h1>
+        <p class="text-xl mb-6 text-center text-white">
+          Présentation des différents albums de la carrière du rappeur SCH
+        </p>
+        <div class="flex space-x-4">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 px-6 py-3 rounded-lg text-xl transition transform hover:scale-105"
+            onclick="scrollToSection('albumsSection')"
+          >
+            Voir les Albums
+          </button>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 px-6 py-3 rounded-lg text-xl transition transform hover:scale-105"
+            onclick="scrollToSection('mixtapesSection')"
+          >
+            Voir les Mixtapes
+          </button>
+        </div>
+      </div>
+    </header>
+    
+
+    <!-- Section principale -->
+    <main id="albumsSection" class="py-12 px-4 md:px-12">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Albums</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Anarchie -->
+        <div class="relative group album-hover">
+          <img src="images/anarchie.jpg" alt="Anarchie" class="album-cover" />
+          <div class="album-info">
+            <span>Anarchie</span>
+            <span>2016</span>
+            <button
+              onclick="openTitlesModal('Anarchie', [
+                    '1. Anarchie',
+                    '2. Trop énorme',
+                    '3. Je la connais',
+                    '4. Cartine Cartier (Ft. Sfera Ebbasta)',
+                    '5. Le doc',
+                    '6. Neuer',
+                    '7. Alleluia',
+                    '8. Allo maman',
+                    '9. Quand on était mômes',
+                    '10. Dix-neuf',
+                    '11. Himalaya',
+                    '12. Essuie tes larmes',
+                    '13. Murcielago',
+                    '14. Anarchie [Livret]'
+                ])"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- Deo Favente -->
+        <div class="relative group album-hover">
+          <img
+            src="images/deo_favente.jpg"
+            alt="Deo Favente"
+            class="album-cover"
+          />
+          <div class="album-info">
+            <span>Deo Favente</span>
+            <span>2017</span>
+            <button
+              onclick="openTitlesModal('Deo Favente', [
+                    '1. Comme si',
+                    '2. Nino Brown',
+                    '3. Allez leur dire',
+                    '4. Day Date',
+                    '5. MAC 11',
+                    '6. Les années de plomb',
+                    '7. Pas la paix',
+                    '8. Jattends',
+                    '9. Ma kush',
+                    '10. Poupée russe',
+                    '11. 6.45i',
+                    '12. Slow Mo',
+                    '13. La nuit',
+                    '14. Ça va (Ft. Lacrim)',
+                    '15. Météore',
+                    '16. Temps mort',
+                    '17. Hold Up'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- JVLIVS -->
+        <div class="relative group album-hover">
+          <img src="images/jvlivs.jpg" alt="JVLIVS" class="album-cover" />
+          <div class="album-info">
+            <span>JVLIVS</span>
+            <span>2018</span>
+            <button
+              onclick="openTitlesModal('JVLIVS', [
+                    '1. Intro - Le déluge',
+                    '2. VNTM',
+                    '3. Pharmacie',
+                    '4. Tokarev',
+                    '5. Interlude - 420 mètres',
+                    '6. Otto',
+                    '7. Skydweller',
+                    '8. Facile',
+                    '9. Prêt à partir (Ft. Ninho)',
+                    '10. Mort de rire',
+                    '11. Ivresse & Hennessy',
+                    '12. J\'t\'en prie',
+                    '13. Interlude - Beretta 92FS',
+                    '14. Le code',
+                    '15. Incompris',
+                    '16. Ciel rouge',
+                    '17. Bénéfice'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- Rooftop -->
+        <div class="relative group album-hover">
+          <img src="images/rooftop.jpg" alt="Rooftop" class="album-cover" />
+          <div class="album-info">
+            <span>Rooftop</span>
+            <span>2019</span>
+            <button
+              onclick="openTitlesModal('Rooftop', [
+                    '1. Cervelle',
+                    '2. All Eyes On Me',
+                    '3. Mayday (Ft. Ninho)',
+                    '4. Petit coeur',
+                    '5. Tant pis',
+                    '6. R.A.C.',
+                    '7. Paye',
+                    '8. Interlude',
+                    '9. Solitude (Ft. Rim\'K)',
+                    '10. Ça ira',
+                    '11. Ciment',
+                    '12. Super Silver Haze (Ft. Heuss L\'enfoiré)',
+                    '13. Tirer un trait',
+                    '14. Every Day (Ft. Capo Plaza & Soolking)',
+                    '15. Frime',
+                    '16. Baden Baden (Ft. GIMS)',
+                    '17. Ah gars',
+                    '18. DLB',
+                    '19. Innocents',
+                    '20. Haut standing'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- JVLIVS 2 -->
+        <div class="relative group album-hover">
+          <img src="images/jvlivs_2.jpg" alt="JVLIVS II" class="album-cover" />
+          <div class="album-info">
+            <span>JVLIVS II</span>
+            <span>2021</span>
+            <button
+              onclick="openTitlesModal('JVLIVS 2', [
+                    '1. Gibraltar',
+                    '2. Marché noir',
+                    '3. Fournaise',
+                    '4. Aluminium',
+                    '5. Mannschaft (Ft. Freeze Corleone)',
+                    '6. Grand bain',
+                    '7. Crack',
+                    '8. La battue',
+                    '9. Zone à danger',
+                    '10. Euro',
+                    '11. Assoces',
+                    '12. Parano',
+                    '13. Corrida',
+                    '14. Le coup d’avance',
+                    '15. Raisons',
+                    '16. Plus rien à se dire',
+                    '17. Mode Akimbo (Ft. JuL)',
+                    '18. Mafia',
+                    '19. Loup noir',
+                    '20. Fantôme (Ft. JuL & Le Rat Luciano)',
+                    '21. Tempête'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- JVLIVS : Prequel - Giulio -->
+        <div class="relative group album-hover">
+          <img
+            src="images/jvlivs_prequel.jpg"
+            alt="JVLIVS : Prequel - Giulio"
+            class="album-cover"
+          />
+          <div class="album-info">
+            <span>JVLIVS : Prequel - Giulio</span>
+            <span>2024</span>
+            <button
+              onclick="openTitlesModal('JVLIVS : Prequel - Giulio', [
+                    '1. Le baptême',
+                    '2. Prequel',
+                    '3. Crois-moi',
+                    '4. Garcimore',
+                    '5. La recette',
+                    '6. Cannelloni',
+                    '7. Les hommes aux yeux noirs',
+                    '8. Quoi',
+                    '9. Beaux-Arts',
+                    '10. La renaissance',
+                    '11. Balafres',
+                    '12. Gris',
+                    '13. Ciel bleu',
+                    '14. Jimmy Twice',
+                    '15. Hells Kitchen',
+                    '16. L\'Opinel',
+                    '17. Calabre',
+                    '18. Batterie vide',
+                    '19. CEO - Bonus',
+                    '20. Adorable - Bonus'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+        <!-- JVLIVS 3 -->
+        <div class="relative group album-hover">
+          <img src="images/jvlivs_3.jpg" alt="JVLIVS 3" class="album-cover" />
+          <div class="album-info">
+            <span>JVLIVS III</span>
+            <span>2024</span>
+            <button
+              onclick="openTitlesModal('JVLIVS III', [
+                    '1. Intro - Ego sum',
+                    '2. Stigmates',
+                    '3. Le taulier',
+                    '4. Dans la tête',
+                    '5. Interlude - Avversita',
+                    '6. Miroirs',
+                    '7. Deux mille',
+                    '8. Soldi famiglia (Ft. Sfera Ebbasta)',
+                    '9. Multirécidiviste',
+                    '10. D\'hier à aujourd’hui',
+                    '11. Rose noire',
+                    '12. 02:00 (Ft. Damso)',
+                    '13. La pluie',
+                    '14. Anamnèse',
+                    '15. Quartiers nord',
+                    '16. Interlude - Jour d’octobre',
+                    '17. Missiles',
+                    '18. Lumière blanche (Ad Finem)',
+                    '19. Hells Angels - Bonus'
+                ]
+                )"
+            >
+              Voir Titres
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section des mixtapes -->
+      <section id="mixtapesSection" class="py-12 px-4 md:px-12">
+        <h2 class="text-3xl font-semibold mb-8 text-center text-white">
+          Mixtapes
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <!-- A7 -->
+          <div class="relative group album-hover">
+            <img src="images/a7.jpg" alt="A7" class="album-cover" />
+            <div class="album-info">
+              <span>A7</span>
+              <span>2015</span>
+              <button
+                onclick="openTitlesModal('A7', [
+                            '1. John Lennon',
+                            '2. A7',
+                            '3. Solides',
+                            '4. Gedeon',
+                            '5. Rêves de gosse',
+                            '6. Genny & Ciro',
+                            '7. Gomorra',
+                            '8. Mauvaises idées',
+                            '9. Liquide (Ft. Lacrim)',
+                            '10. Pas de manières (Ft. Lapso Laps & Sadek)',
+                            '11. Drogue prohibée',
+                            '12. Champs-Élysées',
+                            '13. J\'reviens de loin',
+                            '14. Fusil'
+                        ])"
+              >
+                Voir Titres
+              </button>
+            </div>
+          </div>
+          <!-- Autobahn -->
+          <div class="relative group album-hover">
+            <img src="images/autobahn.jpg" alt="Autobahn" class="album-cover" />
+            <div class="album-info">
+              <span>Autobahn</span>
+              <span>2022</span>
+              <button
+                onclick="openTitlesModal('Autobahn', [
+                            '1. Magnum',
+                            '2. LIF',
+                            '3. Niobe',
+                            '4. Marginaux (Ft. Dinos)',
+                            '5. Offshore',
+                            '6. Autobahn',
+                            '7. Vivienne Westwood',
+                            '8. Transmission Automatique (Ft. So La Lune)',
+                            '9. Blue Bahamas',
+                            '10. Lilou Dallas',
+                            '11. 83K',
+                            '12. Cœur de môme',
+                            '13. Blanc Bleu',
+                            '14. Actes',
+                            '15. Comme avant',
+                            '16. Madre Mia (Ft. Morad)',
+                            '17. King',
+                            '18. Dernière ligne droite (Ft. Laylow)'
+                        ])"
+              >
+                Voir Titres
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal pour les titres -->
+    <!-- Section À propos -->
+    <section id="aboutSection" class="py-12 px-4 md:px-12 relative">
+      <!-- Effet de bordure tournante -->    
+      <!-- Titre -->
+      <h2 class="text-3xl font-semibold mb-8 text-center text-white">
+        À propos
+      </h2>
+    
+      <!-- Contenu principal -->
+      <div class="max-w-5xl mx-auto text-white relative">
+    
+        <!-- Présentation personnelle -->
+        <div class="text-center">
+          <p class="mb-6 text-lg">
+            Étudiant de 21 ans préparant son Master, je souhaite profiter de mon
+            temps libre pour développer des sites web. Passionné par le
+            développement, je cherche constamment à m'améliorer et à apprendre
+            de nouvelles technologies. 🌟
+          </p>
+          <p class="mb-6 text-lg">
+            En dehors du code, j'aime prendre du temps pour sortir, faire du sport,
+            ou simplement me détendre afin de rester clair d'esprit et productif au
+            quotidien. 🚴‍♂️
+          </p>
+          <p class="mb-6 text-lg">
+          L'objectif de ce projet est de s'entrainer à utiliser les différents composants Tailwind
+          J'ai fais le choix de choisir une présentation de la discographie de SCH étant le meilleur rappeur 
+          de tous les temps, c'est le strict minimum que je pouvais faire. 🎤
+          </p>
+        </div>
+    
+        <!-- Section des compétences -->
+        <div class="mt-16">
+          <h3 class="text-3xl font-semibold text-center mb-8">
+            Mes Compétences
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Compétence 1 -->
+            <div
+              class="p-6 bg-gray-800 rounded-lg shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-lg hover:shadow-blue-400/50"
+            >
+              <h4 class="text-xl font-bold text-blue-400 mb-2">
+                Développement Frontend
+              </h4>
+              <p class="text-gray-300">
+                React, Vue.js, Tailwind CSS, CSS Modules, et création d'UI réactives et
+                accessibles.
+              </p>
+            </div>
+        
+            <!-- Compétence 2 -->
+            <div
+              class="p-6 bg-gray-800 rounded-lg shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-lg hover:shadow-blue-400/50"
+            >
+              <h4 class="text-xl font-bold text-blue-400 mb-2">
+                Développement Backend
+              </h4>
+              <p class="text-gray-300">
+                Node.js, Express, MongoDB, API RESTful, et intégration de systèmes
+                sécurisés.
+              </p>
+            </div>
+        
+            <!-- Compétence 3 -->
+            <div
+              class="p-6 bg-gray-800 rounded-lg shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-lg hover:shadow-blue-400/50"
+            >
+              <h4 class="text-xl font-bold text-blue-400 mb-2">Outils et DevOps</h4>
+              <p class="text-gray-300">
+                Git, Docker, CI/CD, GitHub Actions, et gestion des déploiements cloud.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+    <!-- Modal pour les titres -->
+    <div
+      id="titlesModal"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center hidden"
+    >
+      <div id="titlesContent" class="bg-gray-800 p-6 rounded-lg text-center">
+        <h3 id="titlesModalTitle" class="text-2xl font-semibold mb-4"></h3>
+        <ul id="titlesList" class="text-gray-300 mb-4 text-left"></ul>
+        <button
+          class="bg-red-600 hover:bg-red-800 px-4 py-2 rounded-lg"
+          onclick="closeTitlesModal()"
+        >
+          Fermer
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center text-gray-400">
+      <div class="container mx-auto">
+        <p class="mb-4">© 2025 Discographie de SCH. Tous droits réservés.</p>
+        <!-- Liens de contact avec logos -->
+        <div class="flex space-x-6 justify-center mt-4">
+          <a href="mailto:example@example.com" target="_blank" aria-label="Email">
+            <img
+              src="images/e-mail.png"
+              alt="Email"
+              class="w-8 h-8 hover:scale-110 transition transform"
+            />
+          </a>
+          <a
+            href="https://github.com/username"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <img
+              src="images/github.png"
+              alt="GitHub"
+              class="w-8 h-8 hover:scale-110 transition transform"
+            />
+          </a>
+          <a
+            href="https://linkedin.com/in/username"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="images/linkedin.png"
+              alt="LinkedIn"
+              class="w-8 h-8 hover:scale-110 transition transform"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
